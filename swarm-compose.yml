@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  web:
+    image: lb-tester
+    ports:
+      - 8080:3000
+    restart: unless-stopped
+    deploy:
+      mode: replicated
+      replicas: 5
